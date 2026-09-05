@@ -58,3 +58,20 @@ const vagas = [
     salário: 5000,
   }
 ];
+// Função para calcular a compatibilidade entre candidato e vaga de emprego disponível
+function calcularCompatibilidade(candidato, vaga) {
+const requisitosAtendidos = vaga.requisitos.filter((requisito) => candidato.habilidades.includes(requisito));
+const compatibilidade = (requisitosAtendidos.length / vaga.requisitos.length) * 100;
+return compatibilidade;
+}
+// Função para classificar a compatibilidade entre candidatos e vagas de emprego disponíveis
+function classificarCompatibilidade(candidato, vaga) {
+  const compatibilidade = calcularCompatibilidade(candidato, vaga);
+  if (compatibilidade >= 80) {
+    console.log("Alta compatibilidade");
+  } else if (compatibilidade >= 50) {
+    console.log("Média compatibilidade");
+  } else {
+    console.log("Baixa compatibilidade");
+  }
+}
