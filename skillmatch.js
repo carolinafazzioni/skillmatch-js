@@ -4,7 +4,7 @@
 // Data: [01/09/2026]
 // Versão: 1.0
 
-// Perfil dos candidatos
+// RF01 - Perfil dos candidatos
 const candidatos = [
     //Candidato 1
   {
@@ -23,7 +23,7 @@ const candidatos = [
     anosDeExperiência: 4,
   }
 ];
-//Vagas Disponíveis
+// RF02 - Vagas de Emprego Disponíveis
 const vagas = [
   //Vaga 1
   {
@@ -58,13 +58,14 @@ const vagas = [
     salário: 5000,
   }
 ];
-// Função para calcular a compatibilidade entre candidato e vaga de emprego disponível
+// RF03 - Função para calcular a compatibilidade entre candidato e vaga de emprego disponível
 function calcularCompatibilidade(candidato, vaga) {
 const requisitosAtendidos = vaga.requisitos.filter((requisito) => candidato.habilidades.includes(requisito));
 const compatibilidade = (requisitosAtendidos.length / vaga.requisitos.length) * 100;
 return compatibilidade;
 }
-// Função para classificar a compatibilidade entre candidatos e vagas de emprego disponíveis
+
+// RF04 - Função para classificar a compatibilidade entre candidatos e vagas de emprego disponíveis
 function classificarCompatibilidade(candidato, vaga) {
   const compatibilidade = calcularCompatibilidade(candidato, vaga);
   if (compatibilidade >= 80) {
@@ -75,7 +76,15 @@ function classificarCompatibilidade(candidato, vaga) {
     console.log("Baixa compatibilidade");
   }
 }
-//Exibir o resultado da compatibilidade entre candidato e vaga
+
+// RF05 - Lista de habilidades faltantes para o candidato
+function listarHabilidadesFaltantes (candidato, vaga){
+  const habilidadesFaltantes = vaga.requisitos.filter((requisito) => !candidato.habilidades.includes(requisito));
+  return habilidadesFaltantes;
+}
+
+//Resultados
+///Exibir o grau de compatibilidade entre o candidato e a vaga
 
 // Candidato 1 e Vaga 1
 classificarCompatibilidade(candidatos[0], vagas[0]); 
@@ -116,3 +125,34 @@ console.log (candidatos[0].nome + " possui " + compatibilidade7.toFixed(2) + "% 
 classificarCompatibilidade(candidatos[1], vagas[3]); 
 const compatibilidade8 = calcularCompatibilidade(candidatos[1], vagas[3]);
 console.log (candidatos[1].nome + " possui " + compatibilidade8.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[3].empresa  + " para o cargo de " + vagas[3].cargo);
+
+
+///////Exibir as habilidades faltantes dos candidatos para cada vaga pretendida///////
+//Habilidades faltantes do candidato 1 para a vaga 1
+const habilidadesFaltantes1 = listarHabilidadesFaltantes(candidatos[0], vagas[0]);
+console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes1 + "para esta vaga");
+//Habilidades faltantes do candidato 1 para a vaga 2
+const habilidadesFaltantes2 = listarHabilidadesFaltantes(candidatos[0], vagas[1]);
+console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes2 + "para esta vaga");
+//Habilidades faltantes do candidato 1 para a vaga 3
+const habilidadesFaltantes3 = listarHabilidadesFaltantes(candidatos[0], vagas[2]);
+console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes3 + "para esta vaga");
+//Habilidades faltantes do candidato 1 para a vaga 4
+const habilidadesFaltantes4 = listarHabilidadesFaltantes(candidatos[0], vagas[3]);
+console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes4 + "para esta vaga");
+
+//Habilidades faltantes do candidato 2 para a vaga 1
+const habilidadesFaltantes5 = listarHabilidadesFaltantes(candidatos[1], vagas[0]);
+console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes5 + "para esta vaga");
+//Habilidades faltantes do candidato 2 para a vaga 2
+const habilidadesFaltantes6 = listarHabilidadesFaltantes(candidatos[1], vagas[1]);
+console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes6 + "para esta vaga");
+//Habilidades faltantes do candidato 2 para a vaga 3
+const habilidadesFaltantes7 = listarHabilidadesFaltantes(candidatos[1], vagas[2]);
+console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes7 + "para esta vaga");
+//Habilidades faltantes do candidato 2 para a vaga 4
+const habilidadesFaltantes8 = listarHabilidadesFaltantes(candidatos[1], vagas[3]);
+console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes8 + "para esta vaga");
+
+
+
