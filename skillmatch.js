@@ -75,3 +75,44 @@ function classificarCompatibilidade(candidato, vaga) {
     console.log("Baixa compatibilidade");
   }
 }
+//Exibir o resultado da compatibilidade entre candidato e vaga
+
+// Candidato 1 e Vaga 1
+classificarCompatibilidade(candidatos[0], vagas[0]); 
+const compatibilidade = calcularCompatibilidade(candidatos[0], vagas[0]);
+console.log (candidatos[0].nome + " possui " + compatibilidade.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[0].empresa  + " para o cargo de " + vagas[0].cargo);
+
+// Candidato 2 e Vaga 1
+classificarCompatibilidade(candidatos[1], vagas[0]); 
+const compatibilidade2 = calcularCompatibilidade(candidatos[1], vagas[0]);
+console.log (candidatos[1].nome + " possui " + compatibilidade2.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[0].empresa  + " para o cargo de " + vagas[0].cargo);
+
+// Candidato 1 e Vaga 2
+classificarCompatibilidade(candidatos[0], vagas[1]); 
+const compatibilidade3 = calcularCompatibilidade(candidatos[0], vagas[1]);
+console.log (candidatos[0].nome + " possui " + compatibilidade3.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[1].empresa  + " para o cargo de " + vagas[1].cargo);
+
+// Candidato 2 e Vaga 2
+classificarCompatibilidade(candidatos[1], vagas[1]); 
+const compatibilidade4 = calcularCompatibilidade(candidatos[1], vagas[1]);
+console.log (candidatos[1].nome + " possui " + compatibilidade4.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[1].empresa  + " para o cargo de " + vagas[1].cargo);
+
+// Candidato 1 e Vaga 3
+classificarCompatibilidade(candidatos[0], vagas[2]); 
+const compatibilidade5 = calcularCompatibilidade(candidatos[0], vagas[2]);
+console.log (candidatos[0].nome + " possui " + compatibilidade5.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[2].empresa  + " para o cargo de " + vagas[2].cargo);
+
+// Candidato 2 e Vaga 3
+classificarCompatibilidade(candidatos[1], vagas[2]); 
+const compatibilidade6 = calcularCompatibilidade(candidatos[1], vagas[2]);
+console.log (candidatos[1].nome + " possui " + compatibilidade6.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[2].empresa  + " para o cargo de " + vagas[2].cargo);
+
+// Candidato 1 e Vaga 4
+classificarCompatibilidade(candidatos[0], vagas[3]); 
+const compatibilidade7 = calcularCompatibilidade(candidatos[0], vagas[3]);
+console.log (candidatos[0].nome + " possui " + compatibilidade7.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[3].empresa  + " para o cargo de " + vagas[3].cargo);
+
+// Candidato 2 e Vaga 4
+classificarCompatibilidade(candidatos[1], vagas[3]); 
+const compatibilidade8 = calcularCompatibilidade(candidatos[1], vagas[3]);
+console.log (candidatos[1].nome + " possui " + compatibilidade8.toFixed(2) + "% de compatibilidade coma vaga de emprego disponível na " +  vagas[3].empresa  + " para o cargo de " + vagas[3].cargo);
