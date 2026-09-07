@@ -130,29 +130,29 @@ console.log (candidatos[1].nome + " possui " + compatibilidade8.toFixed(2) + "% 
 ///////Exibir as habilidades faltantes dos candidatos para cada vaga pretendida///////
 //Habilidades faltantes do candidato 1 para a vaga 1
 const habilidadesFaltantes1 = listarHabilidadesFaltantes(candidatos[0], vagas[0]);
-console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes1 + "para esta vaga");
+console.log(candidatos[0].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes1 + " para esta vaga na empresa " + vagas[0].empresa);
 //Habilidades faltantes do candidato 1 para a vaga 2
 const habilidadesFaltantes2 = listarHabilidadesFaltantes(candidatos[0], vagas[1]);
-console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes2 + "para esta vaga");
+console.log(candidatos[0].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes2 + " para esta vaga na empresa "+ vagas[1].empresa);
 //Habilidades faltantes do candidato 1 para a vaga 3
 const habilidadesFaltantes3 = listarHabilidadesFaltantes(candidatos[0], vagas[2]);
-console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes3 + "para esta vaga");
+console.log(candidatos[0].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes3 + " para esta vaga na empresa "+ vagas[2].empresa);
 //Habilidades faltantes do candidato 1 para a vaga 4
 const habilidadesFaltantes4 = listarHabilidadesFaltantes(candidatos[0], vagas[3]);
-console.log(candidatos[0].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes4 + "para esta vaga");
+console.log(candidatos[0].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes4 + " para esta vaga na empresa "+ vagas[3].empresa);
 
 //Habilidades faltantes do candidato 2 para a vaga 1
 const habilidadesFaltantes5 = listarHabilidadesFaltantes(candidatos[1], vagas[0]);
-console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes5 + "para esta vaga");
+console.log(candidatos[1].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes5 + " para esta vaga na empresa "+ vagas[0].empresa);
 //Habilidades faltantes do candidato 2 para a vaga 2
 const habilidadesFaltantes6 = listarHabilidadesFaltantes(candidatos[1], vagas[1]);
-console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes6 + "para esta vaga");
+console.log(candidatos[1].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes6 + " para esta vaga na empresa "+ vagas[1].empresa);
 //Habilidades faltantes do candidato 2 para a vaga 3
 const habilidadesFaltantes7 = listarHabilidadesFaltantes(candidatos[1], vagas[2]);
-console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes7 + "para esta vaga");
+console.log(candidatos[1].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes7 + " para esta vaga na empresa "+ vagas[2].empresa);
 //Habilidades faltantes do candidato 2 para a vaga 4
 const habilidadesFaltantes8 = listarHabilidadesFaltantes(candidatos[1], vagas[3]);
-console.log(candidatos[1].nome + "possui as seguintes habilidades faltantes:" + habilidadesFaltantes8 + "para esta vaga");
+console.log(candidatos[1].nome + " possui as seguintes habilidades faltantes: " + habilidadesFaltantes8 + " para esta vaga na empresa "+ vagas[3].empresa);
 
 
 
