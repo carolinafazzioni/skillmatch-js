@@ -62,12 +62,13 @@ Caso duas vagas apresentem o mesmo maior percentual de compatibilidade, o sistem
 
 ## Recomendação de estudo
 
-O sistema gera recomendações de estudo com base nas habilidades que ainda faltam ao candidato.
+O sistema analisa os requisitos de todas as vagas cadastradas e identifica quais habilidades exigidas ainda não são possuídas pelo candidato. 
+A habilidade faltante que aparece com maior frequência entre as vagas é considerada prioritária para o estudo. Quando duas ou mais habilidades empatam, todas são consideradas prioritárias e então recomendadas. 
 
 ## Métodos de array
 
 O projeto utiliza métodos de array para realizar diferentes operações sobre os dados dos candidatos e das vagas.
-O método `filter()` é utilizado para selecionar requisitos que ainda não fazem parte das habilidades do candidato.
+O método `filter()` é utilizado para selecionar requisitos e habilidades de acordo com determinados critérios. O método 'map()' é utilizado na análise das habilidades faltantes entre as vagas e o método 'find()' é utilizado para localizar uma vaga relacionada a habilidade recomendada para estudo.
 
 ## Variáveis em JavaScript
 
