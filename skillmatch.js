@@ -83,6 +83,28 @@ function listarHabilidadesFaltantes (candidato, vaga){
   return habilidadesFaltantes;
 }
 
+//RF06 - Função para encontrar a vaga com maior compatibilidade para o candidato
+function encontrarVagaComMaiorCompatibilidade(candidato, vagas) {
+  let vagaMaisCompativel = null;
+  let maiorCompatibilidade = -1;
+
+  for (const vaga of vagas) {
+    const compatibilidade = calcularCompatibilidade(candidato, vaga);
+
+    if (compatibilidade > maiorCompatibilidade) {
+      maiorCompatibilidade = compatibilidade;
+      vagaMaisCompativel = vaga;
+    }
+  }
+
+  return vagaMaisCompativel;
+}
+const vagaMaisCompativelCandidato1 = encontrarVagaComMaiorCompatibilidade(candidatos[0], vagas);
+console.log("A vaga com maior compatibilidade para " + candidatos[0].nome + " é na empresa " + vagaMaisCompativelCandidato1.empresa + " para o cargo de " + vagaMaisCompativelCandidato1.cargo);
+
+const vagaMaisCompativelCandidato2 = encontrarVagaComMaiorCompatibilidade(candidatos[1], vagas);
+console.log("A vaga com maior compatibilidade para " + candidatos[1].nome + " é na empresa " + vagaMaisCompativelCandidato2.empresa + " para o cargo de " + vagaMaisCompativelCandidato2.cargo);
+
 //Resultados
 ///Exibir o grau de compatibilidade entre o candidato e a vaga
 
